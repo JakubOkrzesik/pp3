@@ -7,13 +7,16 @@ public class Processor{
     
     
     
-    public Processor(String name, double timing, int coreNumber, String socket) {
-        this.name = name;
-        this.timing = timing;
-        this.coreNumber = coreNumber;
-        this.socket = socket;
+    Processor(String name, double timing, int coreNumber, String socket) {
+        setName(name);
+        setTiming(timing);
+        setCoreNumber(coreNumber);
+        setSocket(socket);
     }
     
+    Processor() {
+    }
+
     public String getName() {
         return name;
     }
@@ -37,5 +40,10 @@ public class Processor{
     }
     public void setSocket(String socket) {
         this.socket = socket;
-    } 
+    }
+    
+    public String toString(){
+        return "Name: " + getName() + "\n" + "Timing: " + getTiming() + "\n" + "Core number: " + getCoreNumber() + "\n"
+        + "Socket: " + getSocket();
+    }
 }
