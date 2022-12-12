@@ -15,7 +15,7 @@ public class Book{
         return author;
     }
 
-    public String displayInfo(){
+    public String display(){
         return "Book name: " + name + " " + "Author: " + author;
     }
 }

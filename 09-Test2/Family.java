@@ -12,8 +12,8 @@ public class Family {
     public int adults(){
         int counter=0;
         
-        for(int i=0; i<this.arr1.size(); i++){
-            if(arr1.get(i).getAge()>=18){
+        for(Person person : arr1){
+            if(person.getAge()>=18){
                 counter+=1;
             }
         }
@@ -23,7 +23,7 @@ public class Family {
 
 
     public static void main(String args[]){
-        Family bruh = new Family(new Person("Jakub", 20), new Person("Maria", 25), new Person("Lucjan", 5));
-        System.out.println(bruh.adults());
+        Family f1 = new Family(new Person("Jakub", 20), new Person("Maria", 25), new Person("Lucjan", 5));
+        System.out.println(f1.adults());
     }
 }

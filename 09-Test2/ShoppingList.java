@@ -16,8 +16,8 @@ public class ShoppingList {
         
         ArrayList<String> results = new ArrayList<String>();
         
-        for(int i=0;i<list1.size();i++){
-            results.add(list1.get(i).getName());
+        for(Product product: list1){
+            results.add(product.getName());
         }
 
         return String.join(",",results);
@@ -26,8 +26,8 @@ public class ShoppingList {
     public int total(){
         int results = 0;
 
-        for(int i=0;i<list1.size();i++){
-            results+=list1.get(i).getQuantity();
+        for(Product product: list1){
+            results+=product.getQuantity();
         }
 
         return results;

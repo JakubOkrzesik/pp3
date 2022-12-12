@@ -5,11 +5,11 @@ public class Computer{
     private Processor processor = new Processor();
     
     
-    public Computer(String caseColor, boolean isON, String operatingSystemType, Processor processor){
+    public Computer(String caseColor, boolean isON, String operatingSystemType, String name, double timing, int coreNumber, String socket){
         setCaseColor(caseColor);
         setON(isON);
         setOperatingSystemType(operatingSystemType);
-        this.processor = processor;
+        this.processor = new Processor(name, timing, coreNumber, socket);
     }
 
 
@@ -45,7 +45,7 @@ public class Computer{
     }
 
     public static void main(String[] args){
-        Computer c1 = new Computer(null, false, "Windows", new Processor("bruh", 3.5, 3, "1511"));
+        Computer c1 = new Computer(null, false, "Windows", "Intel", 3.5, 3, "1511");
         System.out.println(c1);
     }
 
